@@ -1,5 +1,5 @@
 import React from 'react'
-import CoverLetter from './components/coverLetter'
+import CoverLetter from './components/CoverLetter'
 import Interests from './components/Interests'
 
 
