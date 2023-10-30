@@ -25,6 +25,7 @@ Aritra Karmakar
 
 useEffect(() => {
   setUpdatedLetterText(letterText)
+  setCopied(false)
 }, [company, role])
 
   const handleCopyToClipboard = () => {
