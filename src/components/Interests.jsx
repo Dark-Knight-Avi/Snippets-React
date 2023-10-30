@@ -15,6 +15,7 @@ I am excited about the opportunity to be part of a dynamic and forward-thinking 
 
 useEffect(() => {
   setUpdatedLetterText(letterText)
+  setCopied(false)
 }, [company])
 
   const handleCopyToClipboard = () => {
