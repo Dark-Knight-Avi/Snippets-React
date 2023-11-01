@@ -4,9 +4,10 @@ const CoverLetter = () => {
   const [copied, setCopied] = useState(false);
   const [company, setCompany] = useState("");
   const [role, setRole] = useState("");
+  const [platform, setPlatform] = useState("");
   const letterText = `Respected Hiring Team,
 
-I am writing to express my enthusiastic interest in the ${role} position at ${company}, as advertised on LinkedIn. With a strong foundation in software development and a genuine passion for innovation, I am confident that I can make a valuable contribution to your team.
+I am writing to express my enthusiastic interest in the ${role} position at ${company}, as advertised on ${platform}. With a strong foundation in software development and a genuine passion for innovation, I am confident that I can make a valuable contribution to your team.
 
 As a highly motivated and efficient full stack developer, I have accumulated over two years of hands-on experience across application layers, presentation layers, and databases. I pride myself on staying abreast of the latest industry trends and continuously enhancing my skills. My qualifications include certifications in both Frontend and Backend technologies, with demonstrated proficiency in JavaScript, TypeScript, React JS, Next JS, Web Performance optimization, and database management systems such as MySQL and Redis.
 
@@ -33,20 +34,26 @@ useEffect(() => {
     setCopied(true);
   };
   return (
-    <div className="flex justify-center flex-col items-center p-10">
+    <div className="flex justify-center flex-col items-center p-10 w-full">
       <h1 className="text-xl font-bold text-center my-2">Cover Letter</h1>
-      <div className="flex justify-between flex-1 items-center">
+      <div className="flex w-full justify-between flex-1 items-center">
         <input
           type="text"
           placeholder="Company name..."
-          className="outline-none px-2 py-1 w-1/2 border border-black mx-5"
+          className="outline-none px-2 py-1 w-1/3 border border-black mx-5"
           onChange={(e) => setCompany(e.target.value)}
         />
         <input
           type="text"
           placeholder="Role..."
-          className="outline-none px-2 py-1 w-1/2 border border-black mx-5"
+          className="outline-none px-2 py-1 w-1/3 border border-black mx-5"
           onChange={(e) => setRole(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Platform..."
+          className="outline-none px-2 py-1 w-1/3 border border-black mx-5"
+          onChange={(e) => setPlatform(e.target.value)}
         />
       </div>
       <div className="whitespace-pre-wrap text-justify my-5 border-black border-2 p-10">
