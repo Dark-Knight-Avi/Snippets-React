@@ -27,7 +27,7 @@ Aritra Karmakar
 useEffect(() => {
   setUpdatedLetterText(letterText)
   setCopied(false)
-}, [company, role])
+}, [company, role, platform])
 
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(letterText);
